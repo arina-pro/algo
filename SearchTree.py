@@ -95,3 +95,28 @@ if __name__ == "__main__":
     [print(i, end=' ') for i in newTree.preorder_list]
     print('\n')
     [print(i, end=' ') for i in newTree.postorder_list]
+    # for checking
+    import sys
+    sys.setrecursionlimit(1000000)
+    newTree.inorder()
+    isCorrect = [newTree.inorder_list[i] < newTree.inorder_list[i + 1] for i in range(len(newTree.inorder_list) - 1)]
+    if sum(isCorrect) == len(newTree.inorder_list) - 1:
+        print("CORRECT")
+    else:
+        print("INCORRECT")
+    # did not pass test 14 (or 8 -- I forgot), check before createTree length of node_list and print correct if it is <=1
+    # after newTree = Tree() use this code
+    if len(node_list) > 1:
+        newTree.createTree(node_list)
+        # for checking
+        import sys
+        sys.setrecursionlimit(1000000)
+        newTree.inorder()
+        isCorrect = [newTree.inorder_list[i] <= newTree.inorder_list[i + 1] for i in range(len(newTree.inorder_list) - 1)]
+        if sum(isCorrect) == len(newTree.inorder_list) - 1:
+            print("CORRECT")
+        else:
+            print("INCORRECT")
+    # did not pass test 14 (or 8 -- I forgot), check before createTree length of node_list and print correct if it is <=1
+    else:
+        print("CORRECT")
