@@ -1,0 +1,3 @@
+﻿  MultigraphConversion.cpp
+C:\code\algo\algo-2\MultigraphConversion\MultigraphConversion\MultigraphConversion.cpp(10,9): warning C4101: 'checkingList': unreferenced local variable
+  MultigraphConversion.vcxproj -> C:\code\algo\algo-2\MultigraphConversion\Debug\MultigraphConversion.exe
